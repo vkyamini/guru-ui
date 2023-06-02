@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginSignup from './pages/LoginSignup';
 import "./styles.css";
 //import API from './utils/API'// all the fetch end-points here

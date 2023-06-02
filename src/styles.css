@@ -1,0 +1,20 @@
+:root {
+    --background: #f9f3ee;
+    --secondary: #020D16;
+    --primary: #fce46b;
+    --light: #303179;
+    --base: #141850;
+
+    --one: #210A72;
+    --two: #A5D6E4;
+    --three: #FBD4D5;
+    --four: #E68244;
+    --five: #57F1B1;
+    
+  }
+  
+  
+  body {
+    background-color: var(--background);
+  }
+  

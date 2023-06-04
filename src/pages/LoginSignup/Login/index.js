@@ -1,7 +1,6 @@
 import React, {useState,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 //import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import profile from '../../Profile'
 import API from "../../../api/API";
 import "./style.css"
  

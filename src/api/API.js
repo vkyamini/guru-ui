@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3001" // if its production, use heroku or use localhost.
-console.log(process.env);
+const API_URL = process.env.NODE_ENV === "production" ? 
+    "https://guru-api.herokuapp.com" : "http://localhost:3001"
 
 const API = {
     getAllUsers: (loginDetails) => 

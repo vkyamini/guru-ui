@@ -1,20 +1,17 @@
 :root {
-    --background: #f9f3ee;
-    --secondary: #020D16;
-    --primary: #fce46b;
-    --light: #303179;
-    --base: #141850;
+  --background: #f9f3ee;
+  --secondary: #020d16;
+  --primary: #fce46b;
+  --light: #303179;
+  --base: #141850;
 
-    --one: #210A72;
-    --two: #A5D6E4;
-    --three: #FBD4D5;
-    --four: #E68244;
-    --five: #57F1B1;
-    
-  }
-  
-  
-  body {
-    background-color: var(--background);
-  }
-  
+  --one: #210a72;
+  --two: #a5d6e4;
+  --three: #fbd4d5;
+  --four: #e68244;
+  --five: #57f1b1;
+}
+
+body {
+  background-color: var(--background);
+}

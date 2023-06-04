@@ -1,50 +1,61 @@
-.form{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+.form {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
-#loginform{
-    background-color:var(--primary);
-    text-align: center;
-    border-radius:20px;
-    height:max-content;
-    padding-top: 10px;
-    border: 2px solid black;
-    margin: 100px auto;
-    box-shadow: 5px 5px black;
+#loginform {
+  background-color: var(--primary);
+  text-align: center;
+  border-radius: 20px;
+  height: max-content;
+  padding-top: 10px;
+  border: 2px solid black;
+  margin: 100px auto;
+  box-shadow: 5px 5px black;
 }
-#logintext{
-   font-size: 25px;
-   font-weight:bolder;
+#logintext {
+  font-size: 25px;
+  font-weight: bolder;
 }
-#email{
-    color:black;
-    height: 30px;
-    width:250px;
-    border-radius: 10px;
-    padding-left:10px;
-    border-radius: 15px;
-
+#email {
+  color: black;
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border-radius: 15px;
+  margin:10px;
 }
-#password{
-    color:black;
-    height: 30px;
-    width:250px;
-    border-radius: 10px;
-    padding-left:10px;
-    border-radius: 15px;
+#password {
+  color: black;
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border-radius: 15px;
+  margin:10px;
 }
-#loginbtn{
-    color:aliceblue;
-    background-color:var(--secondary) ;
-    margin:20px;
-    width:90px;
-    height:33px;
-    font-size: 15px;
-    border-radius: 15px;
+#loginbtn {
+  color: aliceblue;
+  background-color: var(--secondary);
+  margin: 20px;
+  width: 90px;
+  height: 33px;
+  font-size: 15px;
+  border-radius: 15px;
+}
+#addpic{
+  color: aliceblue;
+  background-color: var(--secondary);
+  margin: 20px;
+  width: 90px;
+  height: 33px;
+  font-size: 15px;
+  border-radius: 15px;
 }
 @media screen and (min-width: 768px) {
-    #loginform{
-        width:300px;
-    }
+  #loginform {
+    width: 300px;
+  }
 }

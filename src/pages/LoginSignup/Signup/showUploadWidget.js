@@ -1,8 +1,8 @@
 function showUploadWidget(updateState) {
-    window.cloudinary.openUploadWidget(
+  window.cloudinary.openUploadWidget(
     {
-      cloudName: "dpaw5kaby",
-      uploadPreset: "uebmpfwh",
+      cloudName: process.env.CLOUD_NAME,
+      uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET,
       sources: ["local", "url"],
       showAdvancedOptions: true,
       cropping: true,

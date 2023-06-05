@@ -1,0 +1,48 @@
+body {
+  background-color: var(--background);
+}
+#search {
+  color: black;
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border-radius: 15px;
+}
+#searchbtn {
+  color: aliceblue;
+  background-color: var(--secondary);
+  margin: 20px;
+  width: 90px;
+  height: 33px;
+  font-size: 15px;
+  border-radius: 15px;
+}
+
+#username {
+  text-align: center;
+  color: blue;
+}
+
+#userdisplay {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  width: 250px;
+  height: 500px;
+  text-align: center;
+  color: black;
+  box-shadow: 5px 5px black;
+}
+img {
+  width: 220px;
+  height: 200px;
+  border-radius: 5px;
+  margin: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  #userdiv {
+    display: flex;
+  }
+}

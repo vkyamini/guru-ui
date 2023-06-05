@@ -6,15 +6,20 @@ const API_URL =
     : "http://localhost:3001";
 
 const API = {
-   getAllUsers: (loginDetails) =>
-    // axios will promise to make a POST request to the url, with the details in "logindetails".
+  getAllUsers: (loginDetails) =>
     axios.post(`${API_URL}/api/users/login`, loginDetails),
-  
-    creatUsers:(signupDetails) =>
-    axios.post(`${API_URL}/api/users`, signupDetails)
 
+  creatUsers: (signupDetails) =>
+    axios.post(`${API_URL}/api/users`, signupDetails),
 
+  searchBar: (skill) => axios.get(`${API_URL}/api/users/skills/${skill}`),
 
+  getSingleUser: (userid) => {
+    const token = localStorage.getItem("token");
+    return axios.get(`${API_URL}/api/users/${userid}`, {
+      headers: { Authorization: "Bearer " + token },
+    });
+  },
 };
 
 export default API;

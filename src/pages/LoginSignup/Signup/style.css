@@ -18,6 +18,15 @@
   font-size: 25px;
   font-weight: bolder;
 }
+#skill {
+  color: black;
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border-radius: 15px;
+  margin: 10px;
+}
 #email {
   color: black;
   height: 30px;
@@ -25,7 +34,7 @@
   border-radius: 10px;
   padding-left: 10px;
   border-radius: 15px;
-  margin:10px;
+  margin: 10px;
 }
 #password {
   color: black;
@@ -34,7 +43,7 @@
   border-radius: 10px;
   padding-left: 10px;
   border-radius: 15px;
-  margin:10px;
+  margin: 10px;
 }
 #loginbtn {
   color: aliceblue;
@@ -45,7 +54,7 @@
   font-size: 15px;
   border-radius: 15px;
 }
-#addpic{
+#addpic {
   color: aliceblue;
   background-color: var(--secondary);
   margin: 20px;

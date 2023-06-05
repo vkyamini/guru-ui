@@ -1,0 +1,40 @@
+body {
+  background-color: var(--background);
+}
+#profile {
+  display: flex;
+}
+#profilediv {
+  border: 3px solid black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  box-shadow: 3px 3px black;
+}
+#editbtn {
+  color: aliceblue;
+  background-color: var(--secondary);
+  margin: 20px;
+  width: 90px;
+  height: 33px;
+  font-size: 15px;
+  border-radius: 15px;
+}
+#links {
+  display: flex;
+}
+#git {
+  margin: 10px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+#linked {
+  margin: 10px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+img {
+  border-radius: 50%;
+}

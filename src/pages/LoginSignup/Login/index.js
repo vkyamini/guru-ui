@@ -7,12 +7,13 @@ import "./style.css";
 export default function Login() {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
+  const [userid, setuserid] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      navigate(`/profile`);
+      navigate(`/search`);
     }
   }, []);
 
@@ -23,13 +24,14 @@ export default function Login() {
 
       .then((data) => {
         const storedToken = data.data.token;
-        const userid = data.data.user._id;
+        const id = data.data.user._id;
+        setuserid(id);
         console.log("i am userid", userid);
         // save token from data in local storage
         localStorage.setItem("token", storedToken);
 
-        // re-route to profile change
-        navigate(`/profile`);
+        // re-route to search change
+        navigate(`/search`);
       })
       .catch((err) => {
         alert("invalid credentials", err);

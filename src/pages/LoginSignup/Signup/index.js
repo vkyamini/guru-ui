@@ -3,11 +3,11 @@ import API from "../../../api/API";
 import Dropdown from "../../../shared/Dropdown";
 import getProfileUrl from "./showUploadWidget";
 import "./style.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   // state for all the sign ups fields
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [usernameInput, setuserName] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
@@ -29,9 +29,8 @@ export default function SignUp() {
       skillsKnown: skillInput,
     })
       .then((data) => {
-       alert ("sucess , please login" ,data.username)
-        // route works but the token is not saved while sign-up
-        navigate(`/`);
+      alert("sucessfull, please Login",data)
+      // navigate(`/`);
       
       })
       .catch((err) => {

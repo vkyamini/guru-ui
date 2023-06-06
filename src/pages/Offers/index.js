@@ -16,6 +16,7 @@ export default function CreateOffer() {
     API.createOffer({ Text: textInput, senderId: senderId, userId: userId })
       .then((data) => {
         console.log(data);
+        alert("Hurray !offer created")
       })
       .catch((err) => {});
   };

@@ -2,13 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginSignup from "./pages/LoginSignup";
 import Profile from "./pages/Profile";
+import Offers from "./pages/Offers";
 import SkillSearch from "./pages/SkillSearch";
 import "./styles.css";
 //import API from './utils/API'// all the fetch end-points here
 
 function App() {
   return (
-    <div>
+    <div id="root">
       <Router>
         <Routes>
           <Route path="/" element={<LoginSignup />} />

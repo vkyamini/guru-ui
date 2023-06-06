@@ -1,20 +1,33 @@
+#header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 60px;
+}
+#field {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: space-around;
+}
+#inputskill {
+  margin: 20px;
+  border-radius: 2px;
+}
 .form {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
 }
-
-#loginform {
+#signupform {
   background-color: var(--primary);
   text-align: center;
   border-radius: 20px;
   height: max-content;
   padding-top: 10px;
   border: 2px solid black;
-  margin: 100px auto;
   box-shadow: 5px 5px black;
 }
-#logintext {
+#signuptext {
   font-size: 25px;
   font-weight: bolder;
 }
@@ -24,17 +37,15 @@
   width: 250px;
   border-radius: 10px;
   padding-left: 10px;
-  border-radius: 15px;
   margin: 10px;
 }
+
 #email {
   color: black;
   height: 30px;
   width: 250px;
   border-radius: 10px;
   padding-left: 10px;
-  border-radius: 15px;
-  margin: 10px;
 }
 #password {
   color: black;
@@ -42,29 +53,32 @@
   width: 250px;
   border-radius: 10px;
   padding-left: 10px;
-  border-radius: 15px;
-  margin: 10px;
 }
-#loginbtn {
+#signupbtn {
   color: aliceblue;
   background-color: var(--secondary);
-  margin: 20px;
+  margin: 20px auto;
   width: 90px;
   height: 33px;
   font-size: 15px;
   border-radius: 15px;
+  display: block;
 }
+
 #addpic {
-  color: aliceblue;
-  background-color: var(--secondary);
+  color: white;
+  background-color: var(--light);
   margin: 20px;
-  width: 90px;
   height: 33px;
   font-size: 15px;
   border-radius: 15px;
+  display: block;
+  margin: 20px auto;
 }
+
 @media screen and (min-width: 768px) {
-  #loginform {
-    width: 300px;
+  #signupform {
+    width: 500px;
+    height: auto;
   }
 }

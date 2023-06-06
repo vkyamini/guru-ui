@@ -1,0 +1,32 @@
+options {
+  margin: 5px;
+}
+
+#navs {
+  /* display: flex; */
+  /* justify-content: end; */
+  color: white;
+  background: var(--secondary);
+  padding: 10px;
+  margin: 0px;
+}
+
+.proflink {
+  list-style-type: none;
+  margin: 10px;
+}
+
+.proflink a {
+  color: white;
+}
+
+.proflink a:hover {
+  color: var(--primary);
+}
+
+@media screen and (min-width: 768px) {
+  #navs {
+    display: flex;
+    justify-content: end;
+  }
+}

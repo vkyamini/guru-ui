@@ -7,7 +7,6 @@ import "./style.css";
 export default function Login() {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
-  const [userid, setuserid] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,14 +20,13 @@ export default function Login() {
     e.preventDefault();
 
     API.getAllUsers({ email: emailInput, password: passwordInput })
-
       .then((data) => {
         const storedToken = data.data.token;
-        const id = data.data.user._id;
-        setuserid(id);
-        console.log("i am userid", userid);
+        const userId = data.data.user._id;
+
         // save token from data in local storage
         localStorage.setItem("token", storedToken);
+        localStorage.setItem("userId", userId);
 
         // re-route to search change
         navigate(`/search`);
@@ -39,22 +37,27 @@ export default function Login() {
   };
 
   return (
-    <div id="container">
-      <form id="loginform">
+    <div id="logincontainer">
+      <form className="login-signup-form">
         <p id="logintext">Login</p>
-        <input
-          type="text"
-          placeholder="email@gmail.com"
-          id="email"
-          value={emailInput}
-          onChange={(e) => setEmailInput(e.target.value)}
-        />
-        <input
-          type="password"
-          id="password"
-          value={passwordInput}
-          onChange={(e) => setPasswordInput(e.target.value)}
-        />
+        <div>
+          <input
+            type="text"
+            placeholder="email@gmail.com"
+            className="input-field"
+            value={emailInput}
+            onChange={(e) => setEmailInput(e.target.value)}
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            className="input-field"
+            placeholder="************"
+            value={passwordInput}
+            onChange={(e) => setPasswordInput(e.target.value)}
+          />
+        </div>
         <button id="loginbtn" onClick={loginUser}>
           Login
         </button>

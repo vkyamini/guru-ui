@@ -2,12 +2,28 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import API from "../../api/API";
 import noProfileImg from "./no_profile.jpeg";
+import NavTags from "../../shared/navbar";
 import "./style.css";
+import CreateOffer from "../Offers";
+import ShowOffers from "../Offers/MyOffers";
 
 export default function Profile() {
   const { userId } = useParams();
 
   const [user, setUser] = useState({});
+
+  const EditUsers = (e) => {
+    e.preventDefault();
+    console.log("hello i am gonna edit ");
+    console.log("i am the userId", userId);
+    API.editUser(userId)
+      .then((data) => {
+        console.log("i am the data", data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     API.getSingleUser(userId)
@@ -26,7 +42,7 @@ export default function Profile() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [userId]);
 
   if (!user) {
     return null;
@@ -34,21 +50,46 @@ export default function Profile() {
 
   return (
     <div>
+      <NavTags />
       <div id="profilediv">
-        <img src={user.profilepic ? user.profilepic : noProfileImg} />
-        <p>{user.username}</p>
-        <div id="profile">
-          <p>{user.aboutme}</p>
+        <div>
+          <img
+            id="profpic"
+            src={user.profilepic ? user.profilepic : noProfileImg}
+          />
         </div>
-        <div id="links">
-          <p id="git">{user.github}</p>
-          <p id="linked">{user.linkedIn}</p>
+        <div id="userpartion">
+          <p>
+            <span id="usernameInput">Name:</span>
+            {user.username}
+          </p>
+          {/* <p>
+            <span id="usernameInput">GitHub:</span>
+            {user.github}
+          </p>
+          <p>
+            <span id="usernameInput">Linkedin:</span>
+            {user.linkedIn}
+          </p> */}
+          <div id="links">
+            <p>
+              <span id="usernameInput">Skills:</span>
+              {user.skillsknown}
+            </p>
+          </div>
+          {user.isUser ? (
+            <button onClick={EditUsers} id="editbtn">
+              Edit
+            </button>
+          ) : null}
+          {user.isUser ? (
+            <div>
+              <ShowOffers />
+            </div>
+          ) : (
+            <CreateOffer />
+          )}
         </div>
-        {user.isUser ? (
-          <button id="editbtn">Edit</button>
-        ) : (
-          <button id="editbtn">Make Offer</button>
-        )}
       </div>
     </div>
   );

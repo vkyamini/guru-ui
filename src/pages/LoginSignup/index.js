@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
+import "./style.css";
 
 export default function LoginSignup() {
   const [showLogin, setShowLogin] = useState(true);
@@ -9,7 +10,6 @@ export default function LoginSignup() {
     p: {
       color: "black",
       textAlign: "center",
-      margin: "10px",
     },
     link: {
       textAlign: "center",
@@ -17,19 +17,23 @@ export default function LoginSignup() {
   };
 
   return (
-    <div>
+    <div id="container">
+      <p id="header">Guru</p>
       {showLogin ? <Login /> : <Signup />}
-      <div style={styles.link}>
-        <button
-          style={styles.p}
-          id="loginlink"
+      <div className="login-signup-footer">
+        <p
+          className={showLogin ? "selected" : null}
           onClick={() => setShowLogin(true)}
+          style={{ marginRight: `20px` }}
         >
           Login
-        </button>
-        <button id="loginlink" onClick={() => setShowLogin(false)}>
+        </p>
+        <p
+          className={!showLogin ? "selected" : null}
+          onClick={() => setShowLogin(false)}
+        >
           Signup
-        </button>
+        </p>
       </div>
     </div>
   );

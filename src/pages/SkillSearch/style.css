@@ -1,6 +1,33 @@
-body {
-  background-color: var(--background);
+#star {
+  content: "\2606";
+  color: var(--one);
 }
+#usernameInput {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+#userdisplay:hover {
+  box-shadow: 5px 5px black;
+}
+#line {
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#dropdown {
+  width: 250px;
+}
+
+#search-bar {
+  display: flex;
+  justify-content: center;
+}
+
 #search {
   color: black;
   height: 30px;
@@ -12,11 +39,11 @@ body {
 #searchbtn {
   color: aliceblue;
   background-color: var(--secondary);
-  margin: 20px;
+  margin-left: 10px;
   width: 90px;
-  height: 33px;
+  height: 37px;
   font-size: 15px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 #username {
@@ -27,22 +54,43 @@ body {
 #userdisplay {
   border: 2px solid black;
   border-radius: 10px;
-  margin: 10px;
-  width: 250px;
-  height: 500px;
+  margin: 20px;
   text-align: center;
   color: black;
-  box-shadow: 5px 5px black;
+  padding: 10px;
+  background-color: var(--primary);
 }
-img {
-  width: 220px;
+.userdispplayImg {
+  border: 2px solid black;
+  width: 200px;
   height: 200px;
-  border-radius: 5px;
-  margin: 4px;
+  border-radius: 50%;
+}
+
+#no-matches-text {
+  text-align: center;
+  font-size: 25px;
+  background-color: var(--primary);
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  border: 2px solid black;
 }
 
 @media screen and (min-width: 768px) {
   #userdiv {
     display: flex;
+  }
+
+  #dropdown {
+    width: 700px;
+  }
+  #usernameInput {
+    font-weight: bold;
+    margin: 10px;
+  }
+
+  #no-matches-text {
+    margin: 20px auto;
   }
 }

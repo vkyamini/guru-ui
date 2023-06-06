@@ -1,8 +1,13 @@
-body {
-  background-color: var(--background);
+#userpartion {
+  border-top: 2px solid black;
+  margin: 5px;
 }
-#profile {
-  display: flex;
+
+#profpic {
+  width: 200px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 #profilediv {
   border: 3px solid black;
@@ -10,6 +15,8 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border-radius: 10px;
   box-shadow: 3px 3px black;
+  background-color: var(--primary);
+  margin: 20px;
 }
 #editbtn {
   color: aliceblue;
@@ -35,6 +42,19 @@ body {
   font-style: italic;
   text-decoration: underline;
 }
-img {
-  border-radius: 50%;
+
+@media screen and (min-width: 768px) {
+  #userpartion {
+    border-top: 1px black;
+    border-left: 2px solid black;
+    padding-left: 20px;
+    margin: 1px;
+  }
+
+  #profilediv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: 40px auto;
+  }
 }

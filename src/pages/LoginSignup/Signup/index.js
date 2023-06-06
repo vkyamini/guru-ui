@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import API from "../../../api/API";
-import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
+import Dropdown from "../../../shared/Dropdown";
 import getProfileUrl from "./showUploadWidget";
 import "./style.css";
 
@@ -11,11 +10,7 @@ export default function SignUp() {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [profilePic, setprofilePic] = useState("");
-  const [skillInput, setSkillInput] = useState("");
-  //const [options , setdefaultOption] = useState ("");
-
-  //   const lists=["java","sjhdcgbsdh"]
-  //  setdefaultOption(options)
+  const [skillInput, setSkillInput] = useState([]);
 
   const getProfilePicUrl = (e) => {
     e.preventDefault();
@@ -42,55 +37,37 @@ export default function SignUp() {
 
   return (
     <div id="container">
-      <form id="loginform">
-        <p id="logintext">Please Sign Up!</p>
+      <form className="login-signup-form">
+        <p id="signuptext">Sign Up</p>
         <input
           type="text"
           placeholder="name"
-          id="email"
           value={usernameInput}
           onChange={(e) => setuserName(e.target.value)}
+          className="input-field"
         />
         <input
           type="text"
           placeholder="email@gmail.com"
-          id="email"
           value={emailInput}
           onChange={(e) => setEmailInput(e.target.value)}
+          className="input-field"
         />
         <input
           type="password"
           placeholder="**************"
-          id="password"
           value={passwordInput}
           onChange={(e) => setPasswordInput(e.target.value)}
+          className="input-field"
         />
-        <input
-          type="text"
-          placeholder="skills"
-          id="skill"
-          value={skillInput}
-          onChange={(e) => setSkillInput(e.target.value)}
-        />
-        {/*         
-         <Dropdown 
-              options={lists} 
-              onChange={(e)=>setdefaultOption(e.target.value)} 
-              value={options} 
-              placeholder="Select an option" />; */}
-
-        {/* <label>Skills Known</label>
-        <select>
-          <options value="HTML">HTML</options>
-          <options  value="HTML">JavaScript</options>
-          <options  value="HTML">Node.js</options>
-        </select>
-         */}
-
+        <p>What skills do you know?</p>
+        <div id="inputskill">
+          <Dropdown setSkillInput={setSkillInput} />
+        </div>
         <button id="addpic" onClick={getProfilePicUrl}>
-          Profile Pic
+          Upload Profile Pic
         </button>
-        <button id="loginbtn" onClick={signUpUser}>
+        <button id="signupbtn" onClick={signUpUser}>
           Sign up
         </button>
       </form>

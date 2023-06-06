@@ -29,7 +29,7 @@ export default function SignUp() {
       skillsKnown: skillInput,
     })
       .then((data) => {
-       alert ("please login" ,data.username)
+       alert ("sucess , please login" ,data.username)
         // route works but the token is not saved while sign-up
         navigate(`/`);
       

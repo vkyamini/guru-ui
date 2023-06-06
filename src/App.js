@@ -7,6 +7,7 @@ import SkillSearch from "./pages/SkillSearch";
 import "./styles.css";
 //import API from './utils/API'// all the fetch end-points here
 
+console.table(process.env);
 function App() {
   return (
     <div id="root">

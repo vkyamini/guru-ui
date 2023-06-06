@@ -3,9 +3,11 @@ import API from "../../../api/API";
 import Dropdown from "../../../shared/Dropdown";
 import getProfileUrl from "./showUploadWidget";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   // state for all the sign ups fields
+  const navigate = useNavigate();
   const [usernameInput, setuserName] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
@@ -27,7 +29,8 @@ export default function SignUp() {
       skillsKnown: skillInput,
     })
       .then((data) => {
-        console.log(data);
+        console.log(" i am the data" ,data);
+        navigate(`/search`);
       })
       .catch((err) => {
         alert("invalid data", err);

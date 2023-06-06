@@ -30,7 +30,8 @@ export default function SignUp() {
     })
       .then((data) => {
         console.log(" i am the data" ,data);
-        navigate(`/search`);
+        // route works but the token is not saved while sign-up
+      
       })
       .catch((err) => {
         alert("invalid data", err);

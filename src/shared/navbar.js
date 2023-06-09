@@ -13,6 +13,7 @@ export default function navtags() {
   return (
     <div>
       <ul id="navs">
+        <li id="heading">The Guruu</li>
         <li className="proflink">
           <Link to={`/profile/${user}`}>Profile</Link>
         </li>

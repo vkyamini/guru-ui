@@ -12,20 +12,21 @@ const API = {
   creatUsers: (signupDetails) =>
     axios.post(`${API_URL}/api/users`, signupDetails),
 
-  searchLocation:(location)=>{
+  searchLocation: (location) => {
     const token = localStorage.getItem("token");
     return axios.get(`${API_URL}/api/users/location/${location}`, {
       headers: { Authorization: "Bearer " + token },
     });
-
   },
 
-  searchskillsLocation:(location,skill)=>{
+  searchskillsLocation: (location, skill) => {
     const token = localStorage.getItem("token");
-    return axios.get(`${API_URL}/api/users/location/${location}/skill/${skill}`, {
-      headers: { Authorization: "Bearer " + token },
-    });
-
+    return axios.get(
+      `${API_URL}/api/users/location/${location}/skill/${skill}`,
+      {
+        headers: { Authorization: "Bearer " + token },
+      }
+    );
   },
 
   searchBar: (skill) => {

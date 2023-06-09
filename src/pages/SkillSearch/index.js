@@ -44,8 +44,8 @@ export default function SearchSkill() {
     <div>
       <NavTags />
       <p id="line">
-        What skill do you want to{" "}
-        <button onClick={usersUnknownskill}>Teach?</button>
+        <h3>Search Skills to Learn or Teach </h3>
+        {/* <button onClick={usersUnknownskill}>Teach?</button> */}
       </p>
       <div id="search-bar">
         <div id="dropdown">
@@ -53,6 +53,9 @@ export default function SearchSkill() {
         </div>
         <button id="searchbtn" onClick={search}>
           Learn
+        </button>
+        <button id="searchbtn" onClick={usersUnknownskill}>
+          Teach?
         </button>
       </div>
       <div id="userdiv">
@@ -63,36 +66,53 @@ export default function SearchSkill() {
             return (
               <a href={`/profile/${arr._id}`}>
                 <div id="userdisplay">
-                  <img
-                    className="userdispplayImg"
-                    src={arr.profilepic ?? noProfileImg}
-                  />
-                  <hr />
-
-                  <p>
-                    {" "}
-                    <span id="usernameInput">Name: </span>
-                    {arr.username}
-                  </p>
                   <div>
-                    <p>
+                    <img
+                      className="userdispplayImg"
+                      src={arr.profilepic ?? noProfileImg}
+                    />
+                    <p >
                       {" "}
-                      <span id="usernameInput">Skills: </span>
-                      {arr.skillsKnown.join(", ")}
-                    </p>
-                    <p>
-                      {" "}
-                      <span id="usernameInput">skillsUnknown: </span>
-                      {arr.skillsUnknown.join(", ")}
-                    </p>
-                    <p>
-                      {" "}
-                      <span id="usernameInput">Location: </span>
-                      {arr.Location}
+                      <span id="usernameInput">Name:</span>
+                     {arr.username}
                     </p>
                     <span id="star">&#11089;&#11089;&#11089;&#11089;</span>
                   </div>
-                  <p>{arr.aboutme}</p>
+                  <div id="userseperation">
+                    <div id="seperatecontent">
+                    {" "}
+                    <p>
+                      {" "}
+                      <p >
+                        <span id="usernameInput">Skills: </span>
+                      </p>
+                    <p id="text">{arr.skillsKnown.join(", ")}</p> 
+                    </p>{" "}
+                    <p>
+                      {" "}
+                      <p>
+                        {" "}
+                        <span id="usernameInput">skillsUnknown: </span>
+                      </p>
+                     <p id="text">{arr.skillsUnknown.join(", ")}</p> 
+                    </p>
+                    <p>
+                      {" "}
+                      <p>
+                        <span id="usernameInput">Location: </span>
+                      </p>
+                      <p id="text">{arr.Location}</p>
+                    </p>
+                    <p>
+                      {" "}
+                      <p>
+                        {" "}
+                        <span id="usernameInput">About Me: </span>
+                      </p>
+                     <p id="text"> {arr.aboutme}</p>
+                    </p>
+                    </div>
+                  </div>
                 </div>
               </a>
             );

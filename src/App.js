@@ -21,7 +21,6 @@ function App() {
           <Route path="/profile/:userId" element={<Profile />} />
           <Route path="/search" element={<SkillSearch />} />
           <Route path="/location" element={<LocationSearch />} />
-         
         </Routes>
       </Router>
     </div>

@@ -3,8 +3,7 @@
   color: var(--one);
 }
 #usernameInput {
-
-  font-weight: bold;   
+  font-weight: bold;
   text-align: center;
   text-decoration: underline;
 }
@@ -81,7 +80,7 @@ a {
   border-radius: 10px;
   border: 2px solid black;
 }
-#userseperation  {
+#userseperation {
   border-left: 1px solid black;
   margin-left: 40px;
   text-align: center;
@@ -93,30 +92,28 @@ a {
     margin-left: 300px;
   }
 
-  #userseperation  {
+  #userseperation {
     border-left: 1px solid black;
     margin-left: 40px;
     text-align: center;
   }
-  #seperatecontent{
-   justify-content: center;
-   margin-left: 50px;
-   width:400px;
-   font-size: 20px;
+  #seperatecontent {
+    justify-content: center;
+    margin-left: 50px;
+    width: 400px;
+    font-size: 20px;
   }
- #dropdown {
+  #dropdown {
     width: 700px;
   }
   #usernameInput {
-    
     margin: 10px;
-   
   }
-  #text{
-  font-size:20px ;
-  font-family:'Playfair', serif;
-  margin: 10px;
-}
+  #text {
+    font-size: 20px;
+    font-family: "Playfair", serif;
+    margin: 10px;
+  }
 
   #no-matches-text {
     margin: 20px auto;

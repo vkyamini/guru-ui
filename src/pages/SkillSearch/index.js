@@ -71,46 +71,46 @@ export default function SearchSkill() {
                       className="userdispplayImg"
                       src={arr.profilepic ?? noProfileImg}
                     />
-                    <p >
+                    <p>
                       {" "}
                       <span id="usernameInput">Name:</span>
-                     {arr.username}
+                      {arr.username}
                     </p>
                     <span id="star">&#11089;&#11089;&#11089;&#11089;</span>
                   </div>
                   <div id="userseperation">
                     <div id="seperatecontent">
-                    {" "}
-                    <p>
-                      {" "}
-                      <p >
-                        <span id="usernameInput">Skills: </span>
-                      </p>
-                    <p id="text">{arr.skillsKnown.join(", ")}</p> 
-                    </p>{" "}
-                    <p>
                       {" "}
                       <p>
                         {" "}
-                        <span id="usernameInput">skillsUnknown: </span>
-                      </p>
-                     <p id="text">{arr.skillsUnknown.join(", ")}</p> 
-                    </p>
-                    <p>
-                      {" "}
-                      <p>
-                        <span id="usernameInput">Location: </span>
-                      </p>
-                      <p id="text">{arr.Location}</p>
-                    </p>
-                    <p>
-                      {" "}
+                        <p>
+                          <span id="usernameInput">Skills: </span>
+                        </p>
+                        <p id="text">{arr.skillsKnown.join(", ")}</p>
+                      </p>{" "}
                       <p>
                         {" "}
-                        <span id="usernameInput">About Me: </span>
+                        <p>
+                          {" "}
+                          <span id="usernameInput">skillsUnknown: </span>
+                        </p>
+                        <p id="text">{arr.skillsUnknown.join(", ")}</p>
                       </p>
-                     <p id="text"> {arr.aboutme}</p>
-                    </p>
+                      <p>
+                        {" "}
+                        <p>
+                          <span id="usernameInput">Location: </span>
+                        </p>
+                        <p id="text">{arr.Location}</p>
+                      </p>
+                      <p>
+                        {" "}
+                        <p>
+                          {" "}
+                          <span id="usernameInput">About Me: </span>
+                        </p>
+                        <p id="text"> {arr.aboutme}</p>
+                      </p>
                     </div>
                   </div>
                 </div>

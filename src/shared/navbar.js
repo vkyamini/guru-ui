@@ -19,6 +19,9 @@ export default function navtags() {
         <li className="proflink">
           <Link to="/search">Skill Search</Link>
         </li>
+        <li className="proflink">
+          <Link to="/location">Location</Link>
+        </li>
         <li className="proflink" onClick={logout}>
           <Link to="/">Logout</Link>
         </li>

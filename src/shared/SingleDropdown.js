@@ -72,6 +72,7 @@ const options = [
 const SingleDropdown = ({ setSkillInput }) => (
   <Select
     options={options}
+    placeholder="Search Skill you want to Teach"
     onChange={(data) => {
       const selectedOptions = data.value;
       setSkillInput(selectedOptions);

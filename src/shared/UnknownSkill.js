@@ -1,7 +1,8 @@
 import React from "react";
 import Select from "react-select";
+import "./style.css";
 
-export const options = [
+const options = [
   { value: "react", label: "react" },
   { value: "C language", label: "C language" },
   { value: "C++", label: "C++" },
@@ -68,15 +69,14 @@ export const options = [
   { value: "MongoDB", label: "MongoDB" },
 ];
 
-const Dropdown = ({ setSkillInput }) => (
+const UnknownSkill = ({ setskillunknown }) => (
   <Select
     options={options}
-    isMulti={true}
     onChange={(data) => {
-      const selectedOptions = data.map((opt) => opt.value);
-      setSkillInput(selectedOptions);
+      const selectedOptions = data.value;
+      setskillunknown(selectedOptions);
     }}
   />
 );
 
-export default Dropdown;
+export default UnknownSkill;

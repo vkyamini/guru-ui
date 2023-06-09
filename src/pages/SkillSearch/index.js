@@ -10,6 +10,20 @@ export default function SearchSkill() {
   const [userdata, setUserdata] = useState([]);
   const [skillsWereFetched, setSkillsWereFetched] = useState(false);
 
+  const usersUnknownskill = (e) => {
+    e.preventDefault();
+    API.searchUnknownBar(skillInput)
+      .then((data) => {
+        setSkillsWereFetched(true);
+        const userarray = data.data;
+        setUserdata(userarray);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("no skills matched");
+      });
+  };
+
   // search for the users with the needed skill set from the array opf users
   const search = (e) => {
     e.preventDefault();
@@ -29,13 +43,16 @@ export default function SearchSkill() {
   return (
     <div>
       <NavTags />
-      <p id="line">What skill do you want to learn?</p>
+      <p id="line">
+        What skill do you want to{" "}
+        <button onClick={usersUnknownskill}>Teach?</button>
+      </p>
       <div id="search-bar">
         <div id="dropdown">
           <SingleDropdown setSkillInput={setSkillInput} />
         </div>
         <button id="searchbtn" onClick={search}>
-          Search
+          Learn
         </button>
       </div>
       <div id="userdiv">
@@ -62,6 +79,16 @@ export default function SearchSkill() {
                       {" "}
                       <span id="usernameInput">Skills: </span>
                       {arr.skillsKnown.join(", ")}
+                    </p>
+                    <p>
+                      {" "}
+                      <span id="usernameInput">skillsUnknown: </span>
+                      {arr.skillsUnknown.join(", ")}
+                    </p>
+                    <p>
+                      {" "}
+                      <span id="usernameInput">Location: </span>
+                      {arr.Location}
                     </p>
                     <span id="star">&#11089;&#11089;&#11089;&#11089;</span>
                   </div>

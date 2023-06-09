@@ -1,7 +1,13 @@
 options {
   margin: 5px;
 }
-
+#heading {
+  color: var(--primary);
+  text-align: left;
+  margin-right: 900px;
+  list-style-type: none;
+  font-size: 50px;
+}
 #navs {
   /* display: flex; */
   /* justify-content: end; */

@@ -74,21 +74,17 @@ export default function Profile() {
               id="profpic"
               src={user.profilepic ? user.profilepic : noProfileImg}
             />
-              <span id="usernameInput">GitHub:</span>
-                {!editMode ? (
-                  <a href={`https://github.com/${user.github}`}>
-                    {user.github}
-                  </a>
-                ) : (
-                  <input
-                    type="text"
-                    value={user.github}
-                    onChange={(e) =>
-                      setUser({ ...user, github: e.target.value })
-                    }
-                  />
-                )}
-                <span>Location:</span>
+            <span id="usernameInput">GitHub:</span>
+            {!editMode ? (
+              <a href={`https://github.com/${user.github}`}>{user.github}</a>
+            ) : (
+              <input
+                type="text"
+                value={user.github}
+                onChange={(e) => setUser({ ...user, github: e.target.value })}
+              />
+            )}
+            <span>Location:</span>
             {!editMode ? (
               <p>{user.Location}</p>
             ) : (

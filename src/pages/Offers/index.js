@@ -6,6 +6,7 @@ import "./style.css";
 export default function CreateOffer() {
   // useState for the Text getting entred
   const [textInput, setTextInput] = useState("");
+
   const { userId } = useParams();
 
   const handleCreateOffer = (e) => {
@@ -15,8 +16,9 @@ export default function CreateOffer() {
 
     API.createOffer({ Text: textInput, senderId: senderId, userId: userId })
       .then((data) => {
-        console.log(data);
-        alert("Hurray !offer created")
+        console.log(" initial data", data);
+        alert("Hurray !offer created");
+        console.log("i ma the data you seeing mnow", data);
       })
       .catch((err) => {});
   };
@@ -31,6 +33,7 @@ export default function CreateOffer() {
         value={textInput}
         onChange={(e) => setTextInput(e.target.value)}
       />
+
       <button onClick={handleCreateOffer} id="send-offer-btn">
         Send Offer
       </button>

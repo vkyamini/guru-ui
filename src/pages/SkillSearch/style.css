@@ -3,9 +3,11 @@
   color: var(--one);
 }
 #usernameInput {
-  font-weight: bold;
-}
 
+  font-weight: bold;   
+  text-align: center;
+  text-decoration: underline;
+}
 a {
   text-decoration: none;
 }
@@ -61,10 +63,13 @@ a {
   background-color: var(--primary);
 }
 .userdispplayImg {
-  border: 2px solid black;
-  width: 200px;
-  height: 200px;
+  border: 3px solid black;
   border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 #no-matches-text {
@@ -76,20 +81,42 @@ a {
   border-radius: 10px;
   border: 2px solid black;
 }
-
+#userseperation  {
+  border-left: 1px solid black;
+  margin-left: 40px;
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
-  #userdiv {
+  #userdisplay {
     display: flex;
-    flex-wrap: wrap;
+    width: 890px;
+    margin-left: 300px;
   }
 
-  #dropdown {
+  #userseperation  {
+    border-left: 1px solid black;
+    margin-left: 40px;
+    text-align: center;
+  }
+  #seperatecontent{
+   justify-content: center;
+   margin-left: 50px;
+   width:400px;
+   font-size: 20px;
+  }
+ #dropdown {
     width: 700px;
   }
   #usernameInput {
-    font-weight: bold;
+    
     margin: 10px;
+   
   }
+  #text{
+  font-size:20px ;
+  font-family:'Playfair', serif;
+  margin: 10px;
+}
 
   #no-matches-text {
     margin: 20px auto;

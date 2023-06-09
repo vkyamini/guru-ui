@@ -1,18 +1,23 @@
 import React, { useState } from "react";
+import Login from "../Login";
 import API from "../../../api/API";
+import LocationDropdown from "../../../shared/PlacesDropDown";
 import Dropdown from "../../../shared/Dropdown";
+import UnknownSkill from "../../../shared/UnknownSkill";
 import getProfileUrl from "./showUploadWidget";
 import "./style.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   // state for all the sign ups fields
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [usernameInput, setuserName] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [profilePic, setprofilePic] = useState("");
   const [skillInput, setSkillInput] = useState([]);
+  const [skillunknownInput, setskillunknown] = useState([]);
+  const [locationInput, setlocationInput] = useState(" ");
 
   const getProfilePicUrl = (e) => {
     e.preventDefault();
@@ -27,11 +32,12 @@ export default function SignUp() {
       password: passwordInput,
       profilepic: profilePic,
       skillsKnown: skillInput,
+      skillsUnknown: skillunknownInput,
+      Location: locationInput,
     })
       .then((data) => {
-      alert("sucessfull, please Login",data)
-      // navigate(`/`);
-      
+        alert("sucessfull, please Login", data);
+        navigate("/login");
       })
       .catch((err) => {
         alert("invalid data", err);
@@ -64,9 +70,17 @@ export default function SignUp() {
           onChange={(e) => setPasswordInput(e.target.value)}
           className="input-field"
         />
-        <p>What skills do you know?</p>
+        <div id="inputskill">
+          <LocationDropdown setlocationInput={setlocationInput} />
+        </div>
+
+        <p>skills can Teach</p>
         <div id="inputskill">
           <Dropdown setSkillInput={setSkillInput} />
+        </div>
+        <p>skill you want to learn</p>
+        <div id="inputskill">
+          <UnknownSkill setskillunknown={setskillunknown} />
         </div>
         <button id="addpic" onClick={getProfilePicUrl}>
           Upload Profile Pic

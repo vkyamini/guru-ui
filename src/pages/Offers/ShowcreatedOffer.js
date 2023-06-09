@@ -27,6 +27,7 @@ export default function ShowcreatedOffer() {
           <p>{offer.Text}</p>
           <p>{offer.createdAt}</p>
           <p>{offer.status}</p>
+          <p>{offer.Reply}</p>
         </div>
       ))}
     </ul>

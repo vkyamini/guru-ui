@@ -94,9 +94,9 @@ export default function SignUp() {
         <div className="inputskill">
           <UnknownSkill setskillunknown={setskillunknown} />
         </div>
-        
+
         <button id="addpic" onClick={getProfilePicUrl}>
-        <i class="fa fa-file-picture-o"></i> Upload Profile Pic
+          <i class="fa fa-file-picture-o"></i> Upload Profile Pic
         </button>
         <button id="signupbtn" onClick={signUpUser}>
           Sign up

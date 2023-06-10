@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Login from "../Login";
+//import Login from "../Login";
 import API from "../../../api/API";
 import LocationDropdown from "../../../shared/PlacesDropDown";
 import Dropdown from "../../../shared/Dropdown";
@@ -36,8 +36,12 @@ export default function SignUp() {
       Location: locationInput,
     })
       .then((data) => {
-        alert("sucessfull, please Login", data);
-        navigate("/login");
+        console.log("sign-up done");
+        const storedToken = data.data.token;
+        const userId = data.data.user._id;
+        localStorage.setItem("token", storedToken);
+        localStorage.setItem("userId", userId);
+        navigate(`/profile/${userId}`);
       })
       .catch((err) => {
         alert("invalid data", err);
@@ -49,8 +53,8 @@ export default function SignUp() {
     <div id="container">
       <form className="login-signup-form">
         <p id="signuptext">Sign Up</p>
-        <diV>
-          <i class="fa fa-user icon"></i>
+        <div>
+          <i class="fa fa-user icon margin-right"></i>
           <input
             type="text"
             placeholder="name"
@@ -58,9 +62,9 @@ export default function SignUp() {
             onChange={(e) => setuserName(e.target.value)}
             className="input-field"
           />
-        </diV>
+        </div>
         <div>
-          <i class="fa fa-envelope icon"></i>
+          <i class="fa fa-envelope icon margin-right"></i>
           <input
             type="text"
             placeholder="email@gmail.com"
@@ -70,7 +74,7 @@ export default function SignUp() {
           />
         </div>
         <div>
-          <i class="fa fa-key icon"></i>
+          <i class="fa fa-key icon margin-right"></i>
           <input
             type="password"
             placeholder="**************"
@@ -80,38 +84,24 @@ export default function SignUp() {
           />
         </div>
 
-        <div id="inputskill">
-          <i class="fa fa-plane"></i>
+        <div className="inputskill">
           <LocationDropdown setlocationInput={setlocationInput} />
         </div>
 
-        <p>skills can Teach</p>
-        <div id="inputskill">
-          <i class="fa fa-graduation-cap"></i>
+        <div className="inputskill">
           <Dropdown setSkillInput={setSkillInput} />
         </div>
-        <p>skill you want to learn</p>
-        <div id="inputskill">
-          <i class="fa fa-pencil-square-o"></i>
-          <i class="fa fa-pencil"></i>
+        <div className="inputskill">
           <UnknownSkill setskillunknown={setskillunknown} />
         </div>
-        <i class="fa fa-file-picture-o"></i>
+        
         <button id="addpic" onClick={getProfilePicUrl}>
-          Upload Profile Pic
+        <i class="fa fa-file-picture-o"></i> Upload Profile Pic
         </button>
         <button id="signupbtn" onClick={signUpUser}>
           Sign up
         </button>
       </form>
-      {/* <i class="fa fa-thumbs-down"></i>
-      <i class="fa fa-thumbs-o-up"></i>
-      <i class="fa fa-thumbs-up"></i>
-      <i class="fa fa-toggle-on"></i>
-      <i class="fa fa-trash-o"></i>
-      <i class="fa fa-user-circle-o"></i>
-      <i class="fa fa-users"></i>
-      <i class="fa fa-commenting-o"></i> */}
     </div>
   );
 }

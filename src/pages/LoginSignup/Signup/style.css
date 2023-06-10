@@ -9,9 +9,9 @@
   margin: 10px;
   justify-content: space-around;
 }
-#inputskill {
-  margin: 20px;
-  border-radius: 2px;
+.inputskill {
+  display: flex;
+  margin-left: 60px;
 }
 .form {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -57,10 +57,10 @@
 #signupbtn {
   color: aliceblue;
   background-color: var(--secondary);
-  margin: 20px auto;
-  width: 90px;
+  margin: 30px auto;
+  width: 250px;
   height: 33px;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 15px;
   display: block;
 }
@@ -74,11 +74,36 @@
   border-radius: 15px;
   display: block;
   margin: 20px auto;
+  width: 200px;
+}
+
+.input-dropdown {
+  width: 260px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 8px;
+
+}
+
+.fa-plane {
+  position: relative;
+  top: 10px;
+}
+
+.fa-graduation-cap {
+  position: relative;
+  top: 10px;
+  left: -7px;
 }
 
 @media screen and (min-width: 768px) {
   #signupform {
     width: 500px;
     height: auto;
+  }
+
+  .input-dropdown {
+    margin-left: 20px;
   }
 }

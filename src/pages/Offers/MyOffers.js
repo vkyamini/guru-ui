@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import API from "../../api/API";
 
+const noProfileImg =
+  "https://res.cloudinary.com/dpaw5kaby/image/upload/v1686430797/no_profile_ntowau.webp";
+
 export default function ShowOffers() {
   const [offers, setOffers] = useState([]);
   const [replyInput, setreplyInput] = useState([]);
@@ -17,6 +20,20 @@ export default function ShowOffers() {
         console.log(err);
       });
   };
+
+  // const deleteoffers =(offersId,i) =>{
+  // API.offerDelete(offersId)
+  // .then((data)=>{
+  //   console.log(data)
+  //   const newOffers = [...offers];
+  //       newOffers[i] = data.data.Reply;
+  //       setOffers(newOffers);
+
+  // }).catch((err)=>{
+  //  console.log(err)
+  // })
+
+  // }
   useEffect(() => {
     API.getOffersByUser(userId)
       .then((data) => {
@@ -42,44 +59,72 @@ export default function ShowOffers() {
 
   return (
     <div>
-      <hr></hr>
-
       <ul id="offer-ul">
-        <p>My Offers</p>
+        <h3 style={{ marginLeft: `5px` }}>Offers Recieved:</h3>
 
         {offers.map((offer, i) => (
           <li id="offersingle" key={i}>
             <a href={`/profile/${offer.senderId._id}`}>
               <img
-                src={offer.senderId.profilepic}
+                src={
+                  offer.senderId.profilepic
+                    ? offer.senderId.profilepic
+                    : noProfileImg
+                }
                 className="tiny-profile-pic"
               />
-              <span id="usersoffer">{offer.senderId.username}</span>: "
-              {offer.Text}"<p>Status = {offer.status}</p>
+              <span id="usersoffer">{offer.senderId.username}</span>
             </a>
-            <div>
-              <p>Reply{offer.Reply}</p>
-            </div>
+            <p>
+              <span className="bold">Message:</span> {offer.Text}
+            </p>
+            <p>
+              <span className="bold">Status:</span>{" "}
+              <span className={`tag ${offer.status}`}>{offer.status}</span>
+            </p>
 
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <button
+                onClick={() =>
+                  handleOfferStatusUpdate(offer._id, i, "accepted")
+                }
+                disabled={offer.status === "accepted"}
+                className="offer-btn accept-btn"
+              >
+                Accept
+              </button>
+              <button
+                onClick={() =>
+                  handleOfferStatusUpdate(offer._id, i, "rejected")
+                }
+                disabled={offer.status === "rejected"}
+                className="offer-btn reject-btn"
+              >
+                Reject
+              </button>
+            </div>
             <input
               type="text"
               value={replyInput}
               onChange={(e) => setreplyInput(e.target.value)}
+              style={{
+                marginTop: `30px`,
+                border: `1px solid black`,
+                height: `80px`,
+                width: `98%`,
+                display: `block`,
+                borderRadius: `5px`,
+              }}
             />
-
             <button
-              onClick={() => handleOfferStatusUpdate(offer._id, i, "accepted")}
-              disabled={offer.status === "accepted"}
+              onClick={() => handleOfferMessage(offer._id, i)}
+              className="offer-btn"
+              style={{
+                display: "block",
+                marginLeft: `auto`,
+                marginTop: `10px`,
+              }}
             >
-              Approve
-            </button>
-            <button
-              onClick={() => handleOfferStatusUpdate(offer._id, i, "rejected")}
-              disabled={offer.status === "rejected"}
-            >
-              Reject
-            </button>
-            <button onClick={() => handleOfferMessage(offer._id, i)}>
               Reply
             </button>
           </li>

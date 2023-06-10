@@ -27,10 +27,6 @@
   color: black;
 }
 
-#offersingle:hover {
-  box-shadow: 3px 3px black;
-}
-
 #send-offer-btn {
   background-color: var(--secondary);
   color: white;
@@ -47,6 +43,32 @@
 .tiny-profile-pic {
   width: 50px;
   margin-right: 10px;
+}
+
+.offer-btn {
+  display: block;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 3px 3px black;
+}
+
+.offer-btn:hover {
+  box-shadow: none;
+}
+
+.grey-btn {
+  background-color: var(--two);
+}
+
+.accept-btn {
+  color: green;
+}
+
+.reject-btn {
+  color: red;
+  margin-left: 10px;
 }
 @media screen and (min-width: 768px) {
   #offertext {

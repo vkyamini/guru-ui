@@ -6,6 +6,7 @@ import "./style.css";
 export default function CreateOffer() {
   // useState for the Text getting entred
   const [textInput, setTextInput] = useState("");
+  const [offersent, setoffersent] = useState(false);
 
   const { userId } = useParams();
 
@@ -17,15 +18,19 @@ export default function CreateOffer() {
     API.createOffer({ Text: textInput, senderId: senderId, userId: userId })
       .then((data) => {
         console.log(" initial data", data);
-        alert("Hurray !offer created");
+        // alert("Hurray !offer created");
         console.log("i ma the data you seeing mnow", data);
+        setoffersent(true);
+        setTextInput(" ");
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
     <div>
-      <hr></hr>
+      <hr style={{ border: `1px solid black` }} />
       <input
         type="text"
         placeholder="Add your offer here..."
@@ -33,10 +38,18 @@ export default function CreateOffer() {
         value={textInput}
         onChange={(e) => setTextInput(e.target.value)}
       />
-
       <button onClick={handleCreateOffer} id="send-offer-btn">
-        Send Offer
+        Send
       </button>
+      <h3>
+        {offersent === true ? (
+          <p>
+            Offer Sent<i className="fa fa-thumbs-up"></i>
+          </p>
+        ) : (
+          <p>Send an offer to connect</p>
+        )}
+      </h3>
     </div>
   );
 }

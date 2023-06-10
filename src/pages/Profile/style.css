@@ -22,17 +22,13 @@
   background-color: var(--primary);
   margin: 20px;
 }
-#editbtn {
+.editbtn {
   color: aliceblue;
   background-color: var(--secondary);
-  margin: 20px;
   width: 90px;
   height: 33px;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 15px;
-}
-#links {
-  display: flex;
 }
 #git {
   margin: 10px;
@@ -60,5 +56,15 @@
     flex-wrap: wrap;
     width: 900px;
     margin: 40px auto;
+  }
+
+  #left-section {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 2px solid black;
+  }
+
+  #right-section {
+    margin-top: 10px;
   }
 }

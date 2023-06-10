@@ -72,6 +72,8 @@ const options = [
 const UnknownSkill = ({ setskillunknown }) => (
   <Select
     options={options}
+    placeholder="Skill to learn"
+    className="input-dropdown"
     onChange={(data) => {
       const selectedOptions = data.value;
       setskillunknown(selectedOptions);

@@ -57,11 +57,12 @@ export const options = [
 const LocationDropdown = ({ setlocationInput }) => (
   <Select
     options={options}
-    placeholder="Search the location"
+    placeholder="Location"
     onChange={(data) => {
       const selectedOptions = data.value;
       setlocationInput(selectedOptions);
     }}
+    className="input-dropdown"
   />
 );
 

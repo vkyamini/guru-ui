@@ -71,7 +71,9 @@ export const options = [
 const Dropdown = ({ setSkillInput }) => (
   <Select
     options={options}
+    placeholder="Skills you know"
     isMulti={true}
+    className="input-dropdown move-left"
     onChange={(data) => {
       const selectedOptions = data.map((opt) => opt.value);
       setSkillInput(selectedOptions);

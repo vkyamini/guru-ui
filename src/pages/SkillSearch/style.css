@@ -2,10 +2,9 @@
   content: "\2606";
   color: var(--one);
 }
-#usernameInput {
-  font-weight: bold;
+.usernameInput {
   text-align: center;
-  text-decoration: underline;
+  font-style: italic;
 }
 a {
   text-decoration: none;
@@ -52,11 +51,11 @@ a {
 #userdisplay {
   border: 2px solid black;
   border-radius: 10px;
-  margin: 20px;
-  text-align: center;
+  margin: 10px;
   color: black;
-  padding: 10px;
+  padding: 20px;
   background-color: var(--primary);
+  max-width: 420px;
 }
 .userdispplayImg {
   border: 3px solid black;
@@ -77,11 +76,6 @@ a {
   border-radius: 10px;
   border: 2px solid black;
 }
-#userseperation {
-  border-left: 1px solid black;
-  margin-left: 40px;
-  text-align: center;
-}
 
 #learn-or-teach {
   text-decoration: underline;
@@ -91,28 +85,26 @@ a {
   color: var(--light);
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+
+.skill-tags {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#userdiv {
+  margin-top: 50px;
+}
+@media screen and (min-width: 700px) {
   #userdisplay {
     display: flex;
-    width: 890px;
-    margin-left: 300px;
   }
 
-  #userseperation {
-    border-left: 1px solid black;
-    margin-left: 40px;
-    text-align: center;
-  }
-  #seperatecontent {
-    justify-content: center;
-    margin-left: 50px;
-    width: 400px;
-    font-size: 20px;
-  }
   #dropdown {
     width: 700px;
   }
-  #usernameInput {
+  .usernameInput {
     margin: 10px;
   }
   #text {
@@ -134,5 +126,20 @@ a {
     margin-top: 0px;
     margin-left: -10px;
     width: 100px;
+  }
+
+  .tag-container {
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  .user-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #no-matches-text {
+    width: 500px;
   }
 }

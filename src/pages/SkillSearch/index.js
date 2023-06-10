@@ -3,7 +3,10 @@ import "./style.css";
 import API from "../../api/API";
 import NavTags from "../../shared/navbar";
 import SingleDropdown from "../../shared/SingleDropdown";
-import noProfileImg from "../Profile/no_profile.jpeg";
+import Tag from "../../shared/Tag";
+
+const noProfileImg =
+  "https://res.cloudinary.com/dpaw5kaby/image/upload/v1686430797/no_profile_ntowau.webp";
 
 export default function SearchSkill() {
   const [skillInput, setSkillInput] = useState("");
@@ -44,14 +47,14 @@ export default function SearchSkill() {
   return (
     <div>
       <NavTags />
-      <p id="line">
+      <div id="line">
         <h3>
           Search Skills to{" "}
           <span onClick={() => setIsLearn(!isLearn)} id="learn-or-teach">
             {isLearn ? "Learn" : "Teach"}
           </span>
         </h3>
-      </p>
+      </div>
       <div id="search-bar">
         <div id="dropdown">
           <SingleDropdown setSkillInput={setSkillInput} />
@@ -70,61 +73,53 @@ export default function SearchSkill() {
         {userdata.length === 0 && skillsWereFetched ? (
           <p id="no-matches-text">No matches found 😔</p>
         ) : (
-          userdata.map((arr, i) => {
-            return (
-              <a href={`/profile/${arr._id}`}>
-                <div id="userdisplay">
-                  <div>
-                    <img
-                      className="userdispplayImg"
-                      src={arr.profilepic ?? noProfileImg}
-                    />
-                    <p>
-                      {" "}
-                      <span id="usernameInput">Name:</span>
-                      {arr.username}
-                    </p>
-                    <span id="star">&#11089;&#11089;&#11089;&#11089;</span>
-                  </div>
-                  <div id="userseperation">
-                    <div id="seperatecontent">
-                      {" "}
-                      <p>
-                        {" "}
-                        <p>
-                          <span id="usernameInput">Skills: </span>
-                        </p>
-                        <p id="text">{arr.skillsKnown.join(", ")}</p>
-                      </p>{" "}
-                      <p>
-                        {" "}
-                        <p>
-                          {" "}
-                          <span id="usernameInput">skillsUnknown: </span>
-                        </p>
-                        <p id="text">{arr.skillsUnknown.join(", ")}</p>
-                      </p>
-                      <p>
-                        {" "}
-                        <p>
-                          <span id="usernameInput">Location: </span>
-                        </p>
-                        <p id="text">{arr.Location}</p>
-                      </p>
-                      <p>
-                        {" "}
-                        <p>
-                          {" "}
-                          <span id="usernameInput">About Me: </span>
-                        </p>
-                        <p id="text"> {arr.aboutme}</p>
+          <div className="user-cards">
+            {" "}
+            {userdata.map((user, i) => {
+              return (
+                <a href={`/profile/${user._id}`}>
+                  <div id="userdisplay">
+                    <div>
+                      <div
+                        style={{
+                          height: `200px`,
+                          width: `200px`,
+                          backgroundImage: `url(${
+                            user.profilepic ? user.profilepic : noProfileImg
+                          })`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "top",
+                          borderRadius: `5px`,
+                          border: `1px solid black`,
+                        }}
+                      ></div>
+                      <p style={{ fontSize: `25px`, marginTop: `0px` }}>
+                        {user.username}
                       </p>
                     </div>
+                    <div className="tag-container">
+                      <div style={{ marginBottom: `20px` }}>
+                        <p style={{ margin: `0px` }}>Wants To Teach</p>
+                        <div class="skill-tags">
+                          {user.skillsKnown.map((skill, i) => (
+                            <Tag str={skill} knows={true} />
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <p style={{ margin: `0px` }}>Wants To Learn</p>
+                        <div class="skill-tags">
+                          {user.skillsUnknown.map((skill, i) => (
+                            <Tag str={skill} knows={false} />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </a>
-            );
-          })
+                </a>
+              );
+            })}
+          </div>
         )}
       </div>
     </div>

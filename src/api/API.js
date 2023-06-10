@@ -64,6 +64,10 @@ const API = {
     return axios.put(`${API_URL}/api/offers/${offersId}`, offerDetails);
   },
 
+  offerDelete: (offersId) => {
+    return axios.delete(`${API_URL}/api/offers/${offersId}`);
+  },
+
   editUser: (userid, userDetails) => {
     const token = localStorage.getItem("token");
     return axios.put(`${API_URL}/api/users/${userid}`, userDetails, {

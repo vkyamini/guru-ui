@@ -41,7 +41,7 @@ export default function Login() {
       <form className="login-signup-form">
         <p id="logintext">Login</p>
         <div>
-          <i class="fa fa-envelope icon"></i>
+          <i class="fa fa-envelope icon margin-right"></i>
           <input
             type="text"
             placeholder="email@gmail.com"
@@ -51,7 +51,7 @@ export default function Login() {
           />
         </div>
         <div>
-          <i class="fa fa-key icon"></i>
+          <i class="fa fa-key icon margin-right"></i>
           <input
             type="password"
             className="input-field"

@@ -37,9 +37,9 @@
   color: aliceblue;
   background-color: var(--secondary);
   margin: 20px;
-  width: 90px;
+  width: 200px;
   height: 33px;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 15px;
 }
 @media screen and (min-width: 768px) {

@@ -22,14 +22,14 @@ export default function LoginSignup() {
       {showLogin ? <Login /> : <Signup />}
       <div className="login-signup-footer">
         <p
-          className={showLogin ? "selected" : null}
+          className={`login-signup-option ${showLogin ? "selected" : null}`}
           onClick={() => setShowLogin(true)}
           style={{ marginRight: `20px` }}
         >
           Login
         </p>
         <p
-          className={!showLogin ? "selected" : null}
+          className={`login-signup-option ${!showLogin ? "selected" : null}`}
           onClick={() => setShowLogin(false)}
         >
           Signup

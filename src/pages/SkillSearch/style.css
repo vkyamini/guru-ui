@@ -21,12 +21,8 @@ a {
     "Lucida Sans", Arial, sans-serif;
 }
 #dropdown {
-  width: 250px;
-}
-
-#search-bar {
-  display: flex;
-  justify-content: center;
+  /* width: 250px; */
+  margin: 0px 20px;
 }
 
 #search {
@@ -40,8 +36,9 @@ a {
 #searchbtn {
   color: aliceblue;
   background-color: var(--secondary);
-  margin-left: 10px;
-  width: 90px;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 335px;
   height: 37px;
   font-size: 15px;
   border-radius: 5px;
@@ -85,6 +82,15 @@ a {
   margin-left: 40px;
   text-align: center;
 }
+
+#learn-or-teach {
+  text-decoration: underline;
+}
+
+#learn-or-teach:hover {
+  color: var(--light);
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   #userdisplay {
     display: flex;
@@ -117,5 +123,16 @@ a {
 
   #no-matches-text {
     margin: 20px auto;
+  }
+
+  #search-bar {
+    display: flex;
+    justify-content: center;
+  }
+
+  #searchbtn {
+    margin-top: 0px;
+    margin-left: -10px;
+    width: 100px;
   }
 }

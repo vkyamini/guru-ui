@@ -8,6 +8,7 @@ import noProfileImg from "../Profile/no_profile.jpeg";
 export default function SearchSkill() {
   const [skillInput, setSkillInput] = useState("");
   const [userdata, setUserdata] = useState([]);
+  const [isLearn, setIsLearn] = useState(true);
   const [skillsWereFetched, setSkillsWereFetched] = useState(false);
 
   const usersUnknownskill = (e) => {
@@ -44,19 +45,26 @@ export default function SearchSkill() {
     <div>
       <NavTags />
       <p id="line">
-        <h3>Search Skills to Learn or Teach </h3>
-        {/* <button onClick={usersUnknownskill}>Teach?</button> */}
+        <h3>
+          Search Skills to{" "}
+          <span onClick={() => setIsLearn(!isLearn)} id="learn-or-teach">
+            {isLearn ? "Learn" : "Teach"}
+          </span>
+        </h3>
       </p>
       <div id="search-bar">
         <div id="dropdown">
           <SingleDropdown setSkillInput={setSkillInput} />
         </div>
-        <button id="searchbtn" onClick={search}>
-          Learn
-        </button>
-        <button id="searchbtn" onClick={usersUnknownskill}>
-          Teach?
-        </button>
+        {isLearn ? (
+          <button id="searchbtn" onClick={search}>
+            Learn
+          </button>
+        ) : (
+          <button id="searchbtn" onClick={usersUnknownskill}>
+            Teach
+          </button>
+        )}
       </div>
       <div id="userdiv">
         {userdata.length === 0 && skillsWereFetched ? (

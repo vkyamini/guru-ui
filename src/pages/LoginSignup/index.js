@@ -18,7 +18,7 @@ export default function LoginSignup() {
 
   return (
     <div id="container">
-      <p id="header">Guru</p>
+      {/* <p id="header">Guru</p> */}
       {showLogin ? <Login /> : <Signup />}
       <div className="login-signup-footer">
         <p

@@ -41,7 +41,7 @@ export default function SignUp() {
         const userId = data.data.user._id;
         localStorage.setItem("token", storedToken);
         localStorage.setItem("userId", userId);
-        navigate(`/profile/${userId}`);
+        navigate(`/login`);
       })
       .catch((err) => {
         alert("invalid data", err);
@@ -51,6 +51,7 @@ export default function SignUp() {
 
   return (
     <div id="container">
+        <p id="header">Guru</p>
       <form className="login-signup-form">
         <p id="signuptext">Sign Up</p>
         <div>

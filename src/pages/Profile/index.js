@@ -231,7 +231,7 @@ export default function Profile() {
                 </button>
               )
             ) : null}
-            <hr style={{ border: "1px solid black" }} />
+            {user.isUser ? <hr style={{ border: "1px solid black" }} /> : null}
             {user.isUser ? (
               <div>
                 <ShowcreatedOffer />

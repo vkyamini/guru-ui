@@ -65,8 +65,8 @@ export default function ShowOffers() {
     <div>
       <ul id="offer-ul">
         <h3 style={{ marginLeft: `5px` }}>Offers Recieved:</h3>
-
-        {offers.map((offer, i) => (
+        <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+        {offers.length === 0 ? <p>No offers recieved.</p> : offers.map((offer, i) => (
           <li id="offersingle" key={i}>
             <a href={`/profile/${offer.senderId._id}`}>
               <img
@@ -138,6 +138,7 @@ export default function ShowOffers() {
             )}
           </li>
         ))}
+        </div>
       </ul>
     </div>
   );

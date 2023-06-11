@@ -37,7 +37,8 @@ export default function ShowcreatedOffer() {
   return (
     <ul id="offer-ul">
       <h3 style={{ marginLeft: `5px` }}>Offers Sent:</h3>
-      {showoffers.map((offer, i) => (
+      <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+      {showoffers.length === 0 ? <p>No offers sent.</p> : showoffers.map((offer, i) => (
         <div id="offersingle" key={i}>
           <p style={{ fontSize: `14px`, textAlign: `right` }}>
             {new Date(offer.createdAt).toDateString()}
@@ -63,6 +64,7 @@ export default function ShowcreatedOffer() {
           </div>
         </div>
       ))}
+      </div>
     </ul>
   );
 }

@@ -80,7 +80,7 @@ export default function Profile() {
               <p
                 style={{
                   fontSize: `25px`,
-                  marginLeft: `10px`,
+                  marginLeft: `65px`,
                   marginTop: `0px`,
                   marginBottom: `0px`,
                 }}
@@ -101,7 +101,7 @@ export default function Profile() {
               </div>
             )}
             {!editMode ? (
-              <p style={{ marginLeft: `10px`, marginTop: `0px` }}>
+              <p style={{ marginLeft: `60px`, marginTop: `0px` }}>
                 From {user.Location}
               </p>
             ) : (
@@ -121,7 +121,7 @@ export default function Profile() {
               user.Github ? (
                 <span
                   style={{
-                    marginLeft: `10px`,
+                    marginLeft: `60px`,
                     marginBottom: `10px`,
                     display: "block",
                   }}

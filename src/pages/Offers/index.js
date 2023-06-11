@@ -17,11 +17,8 @@ export default function CreateOffer() {
 
     API.createOffer({ Text: textInput, senderId: senderId, userId: userId })
       .then((data) => {
-        console.log(" initial data", data);
-        // alert("Hurray !offer created");
-        console.log("i ma the data you seeing mnow", data);
         setoffersent(true);
-        setTextInput(" ");
+        setTextInput("");
       })
       .catch((err) => {
         console.log(err);
@@ -31,6 +28,7 @@ export default function CreateOffer() {
   return (
     <div>
       <hr style={{ border: `1px solid black` }} />
+      <h3>Send an offer to connect</h3>
       <input
         type="text"
         placeholder="Add your offer here..."
@@ -39,17 +37,8 @@ export default function CreateOffer() {
         onChange={(e) => setTextInput(e.target.value)}
       />
       <button onClick={handleCreateOffer} id="send-offer-btn">
-        Send
+        {offersent ? <span>Sent <i className="fa fa-thumbs-up"></i></span> : <span>Send</span>}
       </button>
-      <h3>
-        {offersent === true ? (
-          <p>
-            Offer Sent<i className="fa fa-thumbs-up"></i>
-          </p>
-        ) : (
-          <p>Send an offer to connect</p>
-        )}
-      </h3>
     </div>
   );
 }

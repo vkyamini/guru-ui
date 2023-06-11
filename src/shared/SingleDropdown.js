@@ -77,7 +77,7 @@ const SingleDropdown = ({ setSkillInput }) => (
       const selectedOptions = data.value;
       setSkillInput(selectedOptions);
     }}
-  />
+   />
 );
 
 export default SingleDropdown;

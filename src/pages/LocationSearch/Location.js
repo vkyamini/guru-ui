@@ -42,18 +42,19 @@ export default function LocationSearch() {
   };
   return (
     <div>
-      <Navbar />
+      <Navbar/>
       <h1>search by location</h1>
-      <div id="dropdown">
+      <div id="locatnbtn">
         <PlacesDropDown setlocationInput={setlocationInput} />
-        <button onClick={searchLocation}>Search</button>
-        <SingleDropdown setSkillInput={setSkillInput} />
-        <button onClick={LocationandSkill} disabled={locationdata.length === 0}>
-          skillSearch(Teach)
-        </button>
-      </div>
 
-      <div id="userdiv">
+        <button className="editbtn" onClick={searchLocation}>Search</button>
+        {Fetched?( <SingleDropdown  setSkillInput={setSkillInput} />):(<p></p>)}
+       
+        {Fetched?(  <button id="skbtn" className="editbtn" onClick={LocationandSkill} disabled={locationdata.length === 0}>
+         Learn
+        </button> ):(<p></p>)}
+      </div>
+    <div id="userdiv">
         {locationdata.length === 0 && Fetched ? (
           <p id="no-matches-text">No matches found 😔</p>
         ) : (
@@ -78,17 +79,12 @@ export default function LocationSearch() {
                       <span id="usernameInput">Skills: </span>
                       {arr.skillsKnown.join(", ")}
                     </p>
-                    <p>
-                      {" "}
-                      <span id="usernameInput">skillsUnknown: </span>
-                      {arr.skillsUnknown.join(", ")}
-                    </p>
-                    <p>
+                     <p>
                       {" "}
                       <span id="usernameInput">Location: </span>
                       {arr.Location}
                     </p>
-                    <span id="star">&#11089;&#11089;&#11089;&#11089;</span>
+                  
                   </div>
                   <p>{arr.aboutme}</p>
                 </div>

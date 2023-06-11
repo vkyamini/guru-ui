@@ -149,4 +149,11 @@ a {
   #no-matches-text {
     width: 500px;
   }
+
+  .skill-tags {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

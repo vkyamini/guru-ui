@@ -37,33 +37,37 @@ export default function ShowcreatedOffer() {
   return (
     <ul id="offer-ul">
       <h3 style={{ marginLeft: `5px` }}>Offers Sent:</h3>
-      <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-      {showoffers.length === 0 ? <p>No offers sent.</p> : showoffers.map((offer, i) => (
-        <div id="offersingle" key={i}>
-          <p style={{ fontSize: `14px`, textAlign: `right` }}>
-            {new Date(offer.createdAt).toDateString()}
-          </p>
-          <p>
-            <span className="bold">Message:</span> {offer.Text}
-          </p>
-          <p>
-            <span className="bold">Status:</span>{" "}
-            <span className={`tag ${offer.status}`}>{offer.status}</span>
-          </p>
-          <p>
-            <span className="bold">Reply:</span> {offer.Reply}
-          </p>
-          {/* <p>{offer.Reply}</p> */}
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <button
-              onClick={() => offerdelete(offer._id, i)}
-              className="offer-btn delete-btn"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      ))}
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+        {showoffers.length === 0 ? (
+          <p>No offers sent.</p>
+        ) : (
+          showoffers.map((offer, i) => (
+            <div id="offersingle" key={i}>
+              <p style={{ fontSize: `14px`, textAlign: `right` }}>
+                {new Date(offer.createdAt).toDateString()}
+              </p>
+              <p>
+                <span className="bold">Message:</span> {offer.Text}
+              </p>
+              <p>
+                <span className="bold">Status:</span>{" "}
+                <span className={`tag ${offer.status}`}>{offer.status}</span>
+              </p>
+              <p>
+                <span className="bold">Reply:</span> {offer.Reply}
+              </p>
+              {/* <p>{offer.Reply}</p> */}
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <button
+                  onClick={() => offerdelete(offer._id, i)}
+                  className="offer-btn delete-btn"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </ul>
   );

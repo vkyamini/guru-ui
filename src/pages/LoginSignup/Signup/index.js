@@ -36,11 +36,6 @@ export default function SignUp() {
       Location: locationInput,
     })
       .then((data) => {
-        console.log("sign-up done");
-        const storedToken = data.data.token;
-        const userId = data.data.user._id;
-        localStorage.setItem("token", storedToken);
-        localStorage.setItem("userId", userId);
         navigate(`/login`);
       })
       .catch((err) => {

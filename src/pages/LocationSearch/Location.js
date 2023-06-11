@@ -42,19 +42,30 @@ export default function LocationSearch() {
   };
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <h1>search by location</h1>
       <div id="locatnbtn">
         <PlacesDropDown setlocationInput={setlocationInput} />
 
-        <button className="editbtn" onClick={searchLocation}>Search</button>
-        {Fetched?( <SingleDropdown  setSkillInput={setSkillInput} />):(<p></p>)}
-       
-        {Fetched?(  <button id="skbtn" className="editbtn" onClick={LocationandSkill} disabled={locationdata.length === 0}>
-         Learn
-        </button> ):(<p></p>)}
+        <button className="editbtn" onClick={searchLocation}>
+          Search
+        </button>
+        {Fetched ? <SingleDropdown setSkillInput={setSkillInput} /> : <p></p>}
+
+        {Fetched ? (
+          <button
+            id="skbtn"
+            className="editbtn"
+            onClick={LocationandSkill}
+            disabled={locationdata.length === 0}
+          >
+            Learn
+          </button>
+        ) : (
+          <p></p>
+        )}
       </div>
-    <div id="userdiv">
+      <div id="userdiv">
         {locationdata.length === 0 && Fetched ? (
           <p id="no-matches-text">No matches found 😔</p>
         ) : (
@@ -79,12 +90,11 @@ export default function LocationSearch() {
                       <span id="usernameInput">Skills: </span>
                       {arr.skillsKnown.join(", ")}
                     </p>
-                     <p>
+                    <p>
                       {" "}
                       <span id="usernameInput">Location: </span>
                       {arr.Location}
                     </p>
-                  
                   </div>
                   <p>{arr.aboutme}</p>
                 </div>

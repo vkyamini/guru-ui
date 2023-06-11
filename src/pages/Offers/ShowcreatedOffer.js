@@ -24,9 +24,9 @@ export default function ShowcreatedOffer() {
   const offerdelete = (offersId, i) => {
     API.offerDelete(offersId)
       .then((data) => {
-        console.log(data);
-        const newoff = [...showoffers];
-        newoff[i] = data.data;
+        let newoff = [...showoffers];
+        newoff = newoff.filter((offer, index) => i !== index);
+        console.log(newoff);
         setshowOffers(newoff);
       })
       .catch((err) => {

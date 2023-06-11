@@ -8,7 +8,7 @@ const noProfileImg =
 export default function ShowOffers() {
   const [offers, setOffers] = useState([]);
   const [replyInput, setreplyInput] = useState([]);
-  const [replystatusInput ,setreplystatusInput] = useState (false);
+  const [replystatusInput, setreplystatusInput] = useState(false);
   const { userId } = useParams();
 
   const handleOfferStatusUpdate = (offersId, i, status) => {
@@ -53,10 +53,8 @@ export default function ShowOffers() {
         newOffers[i].Reply = data.data.Reply;
         setOffers(newOffers);
         console.log(data);
-        setreplystatusInput(true)
-        setreplyInput([ ])
-      
-       
+        setreplystatusInput(true);
+        setreplyInput([]);
       })
       .catch((err) => {
         console.log(err);
@@ -133,10 +131,14 @@ export default function ShowOffers() {
             >
               Reply
             </button>
-            {replystatusInput === true?(<p>reply sent</p>):(<p>reply not sent</p>)}
+            {replystatusInput === true ? (
+              <p>reply sent</p>
+            ) : (
+              <p>reply not sent</p>
+            )}
           </li>
         ))}
-     </ul>
+      </ul>
     </div>
   );
 }

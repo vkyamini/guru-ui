@@ -23,15 +23,13 @@ a {
   /* width: 250px; */
   margin: 0px 20px;
 }
-#locatnbtn{
+#locatnbtn {
   display: flex;
- flex-wrap: wrap;
- }
-#skbtn{
-  border-radius: 30px;
- 
+  flex-wrap: wrap;
 }
-
+#skbtn {
+  border-radius: 30px;
+}
 
 #search {
   color: black;
@@ -104,11 +102,8 @@ a {
 
 #userdiv {
   margin-top: 50px;
- 
 }
 @media screen and (min-width: 700px) {
-  
-
   #dropdown {
     width: 700px;
   }
@@ -130,10 +125,9 @@ a {
     justify-content: center;
   }
 
-#userdiv {
- display: flex;
- 
-}
+  #userdiv {
+    display: flex;
+  }
 
   #searchbtn {
     margin-top: 0px;

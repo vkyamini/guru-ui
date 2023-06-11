@@ -38,7 +38,7 @@ export default function Login() {
 
   return (
     <div id="logincontainer">
-        <p id="header">Guru</p>
+      <p id="header">Guru</p>
       <form className="login-signup-form">
         <p id="logintext">Login</p>
         <div>

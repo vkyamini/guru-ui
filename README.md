@@ -1,7 +1,5 @@
 # THE GURU
 
-
-
 [Website](https://guru-ui.netlify.app/)
 
 The Project is built with the need for the programmers to connect with other programmers 
@@ -120,6 +118,6 @@ MIT
 
 ## Contact
 
- * [Contact Me](https://yamcodes.com/).
-   
- * [Email](yamini@yamcodes.com)
+  * [websit](https://yamcodes.com/)
+  * [Contact Me](https://yamcodes.com/).
+  * [Email](yamini@yamcodes.com)

@@ -1,4 +1,5 @@
 # The Guruu
+Website Link:https://guru-ui.netlify.app/
 
 The Project is built with the need for the programmers to connect with other programmers 
 who are willing to teach or learn a particular skill(programming language).
@@ -38,7 +39,7 @@ If need to create your own similar project, follow the basic requirements below.
 * Clone the repo to your system.
 * Download all the dependencies.
 * Connect back-end to the front-end.
-* [Back-end repo link] (https://github.com/vkyamini/guru-api)
+* [Back-end repo link](https://github.com/vkyamini/guru-api)
 
 ### Executing program
 

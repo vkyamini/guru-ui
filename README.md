@@ -49,9 +49,6 @@ If need to create your own similar project, follow the basic requirements below.
 ## Help
 
 creation of a file for dotenv is required.
-```
-
-```
 
 ## Authors
 

@@ -1,6 +1,6 @@
-# Project Name
+# THE GURU
 
-THE GURUU
+
 
 [Website](https://guru-ui.netlify.app/)
 

@@ -31,10 +31,16 @@ The receiver can further communicate by sending the details and links to connect
 ## Features
 
 - Handled user authentication using json web tokens and encrypting user passwords with bcrypt.
-   ![Screenshot](/img/sign-up.png)
+    ![Screenshot](/img/sign-up.png)
 - Allow users to query for other developers by programming language or location through a search bar inspired by google search bar.
+    ![Screenshot](/img/searchpage.png)
 - Created logic allowing developers to send offers within the application to other developers.
+    ![Screenshot](/img/yamsendingoffer.png)
+    ![Screenshot](/img/ashureceive.png)
 - Supported multiple statuses for offers( eg: “accepted”, ”rejected”, ”pending”) depending upon the receivers reply.
+   ![Screenshot](/img/ashu2.png)
+- The user can delete the offer.
+     ![Screenshot](/img/yamsfinale.png)
 
 ## Video Link
 

@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# The Guruu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Project is built with the need for the programmers to connect with other programmers 
+who are willing to teach or learn a particular skill(programming language).
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This Fullstack web app allows users to find other programmers based on their skills(learn/teach) or location.
+Once the user finds a match user can connect with them by sending an offer to them, Once the offer is sent,
+the status is marked pending along with Date and Time.
+Depending on the response from the receivers, the status changes to accept/reject based on the receiver's response. 
+The receiver can further communicate by sending the details and links to connect. 
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*  "axios": "^1.4.0",
+*  "dotenv": "^16.1.4",
+*  "prettier": "^2.8.8",
+*  "react": "^18.2.0",
+*  "react-dom": "^18.2.0",
+*  "react-router-dom": "^6.11.2",
+*  "react-scripts": "5.0.1",
+*  "react-select": "^5.7.3",
+*  "web-vitals": "^2.1.4",
+*  "bcrypt": "^5.1.0",
+*  "cors": "^2.8.5",
+*  "express": "^4.18.2",
+*  "jsonwebtoken": "^9.0.0",
+*  "mongoose": "^7.2.1"*
 
-### `npm test`
+### Installing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+No installation process is required the provided link redirects to the website.
+If need to create your own similar project, follow the basic requirements below.
 
-### `npm run build`
+* Clone the repo to your system.
+* Download all the dependencies.
+* Connect back-end to the front-end.
+* [Back-end repo link] (https://github.com/vkyamini/guru-api)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Executing program
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* npm start for back-end.
+* npm start for front-end.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Help
 
-### `npm run eject`
+creation of a file for dotenv is required.
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ V.K Yamini
+ [Contact Me] (https://yamcodes.com/)
+ [Email] (yamini@yamcodes.com)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+MIT
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

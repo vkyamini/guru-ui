@@ -31,7 +31,7 @@ The receiver can further communicate by sending the details and links to connect
 ## Features
 
 - Handled user authentication using json web tokens and encrypting user passwords with bcrypt.
-- ![Screenshot](/img/sign-up.png)
+   ![Screenshot](/img/sign-up.png)
 - Allow users to query for other developers by programming language or location through a search bar inspired by google search bar.
 - Created logic allowing developers to send offers within the application to other developers.
 - Supported multiple statuses for offers( eg: “accepted”, ”rejected”, ”pending”) depending upon the receivers reply.

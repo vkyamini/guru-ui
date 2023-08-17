@@ -54,9 +54,9 @@ creation of a file for dotenv is required.
 
 ## Authors
 
- V.K Yamini
- [Contact Me] (https://yamcodes.com/)
- [Email] (yamini@yamcodes.com)
+ * V.K Yamini
+ * [Contact Me] (https://yamcodes.com/)
+ * [Email] (yamini@yamcodes.com)
 
 ## License
 

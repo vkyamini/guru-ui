@@ -46,10 +46,6 @@ If need to create your own similar project, follow the basic requirements below.
 * npm start for back-end.
 * npm start for front-end.
 
-## Help
-
-creation of a file for dotenv is required.
-
 ## Authors
 
  * V.K Yamini.

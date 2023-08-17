@@ -39,7 +39,13 @@ The receiver can further communicate by sending the details and links to connect
 
 
 - Allow users to query for other developers by programming language or location through a search bar inspired by google search bar.
+
+
+
     ![Screenshot](/img/searchpage.png)
+
+
+    
 - Created logic allowing developers to send offers within the application to other developers.
    
     ![Screenshot](/img/ashureceive.png)

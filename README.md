@@ -45,10 +45,10 @@ The receiver can further communicate by sending the details and links to connect
     ![Screenshot](/img/searchpage.png)
 
 
-    
+
 - Created logic allowing developers to send offers within the application to other developers.
    
-    ![Screenshot](/img/ashureceive.png)
+  
 - Supported multiple statuses for offers( eg: “accepted”, ”rejected”, ”pending”) depending upon the receivers reply.
 
 

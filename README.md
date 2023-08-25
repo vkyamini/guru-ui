@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# THE GURU
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Website](https://guru-ui.netlify.app/)
 
-## Available Scripts
+The Project is built with the need for the programmers to connect with other programmers 
+who are willing to Teach/Learn a particular skill(programming language).
 
-In the project directory, you can run:
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Authors](#Authors)
+- [License](#license)
+- [Contact](#contact)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This Fullstack web app allows users to find other programmers based on their skills(learn/teach) or location.
+Once the user finds a match user can connect with them by sending an offer to them, Once the offer is sent,
+the status is marked pending along with Date and Time.
+Depending on the response from the receivers, the status changes to accept/reject based on the receiver's response. 
+The receiver can further communicate by sending the details and links to connect. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Handled user authentication using json web tokens and encrypting user passwords with bcrypt.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ![Screenshot](/img/sign-up.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Allow users to query for other developers by programming language or location through a search bar inspired by google search bar.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ![Screenshot](/img/searchpage.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Created logic allowing developers to send offers within the application to other developers.
+   
+  
+- Supported multiple statuses for offers( eg: “accepted”, ”rejected”, ”pending”) depending upon the receivers reply.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ![Screenshot](/img/ashu2.png)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The user can delete the offer.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+     ![Screenshot](/img/yamsfinale.png)
 
-### Advanced Configuration
+## Video Link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[video Link](https://drive.google.com/file/d/1wAUCFeO3Ug2qqaD7kFXLdbwg8yq8_pi8/view)
+ 
+## Getting Started
 
-### Deployment
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+*  "axios": "^1.4.0",
+*  "dotenv": "^16.1.4",
+*  "prettier": "^2.8.8",
+*  "react": "^18.2.0",
+*  "react-dom": "^18.2.0",
+*  "react-router-dom": "^6.11.2",
+*  "react-scripts": "5.0.1",
+*  "react-select": "^5.7.3",
+*  "web-vitals": "^2.1.4",
+*  "bcrypt": "^5.1.0",
+*  "cors": "^2.8.5",
+*  "express": "^4.18.2",
+*  "jsonwebtoken": "^9.0.0",
+*  "mongoose": "^7.2.1"*
 
-### `npm run build` fails to minify
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. No installation is required. The provided link redirects to the web Application
+2. For creating your own similar project, follow the basic requirements below.
+
+    * Clone the repo to your system.
+    * Download all the dependencies.
+    * Connect back-end to the front-end.
+    * [Back-end repo link](https://github.com/vkyamini/guru-api)
+
+## Usage
+
+
+* npm start for back-end.
+* npm start for front-end.
+* Creation for dotenv file with database user details is required.
+
+
+## Technologies Used
+
+- ReactJs
+- MongoDB
+- NodeJS
+- cloudinary
+- CSS
+- HTML
+
+## Authors
+
+V.K YAMINI
+
+## License
+
+MIT
+
+## Contact
+
+  * [websit](https://yamcodes.com/)
+  * [Contact Me](https://yamcodes.com/).
+  * [Email](yamini@yamcodes.com)

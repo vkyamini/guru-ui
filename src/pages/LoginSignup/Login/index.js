@@ -42,9 +42,6 @@ export default function Login() {
      <p>To test the product without signing up use these credential</p>
      <p> Email: test@gmail.com </p>
      <p>password: password</p>
-      
-      
-     
       <p id="header">Guru</p>
        <form className="login-signup-form">
         <p id="logintext">Login</p>

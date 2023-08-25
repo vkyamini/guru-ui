@@ -38,8 +38,15 @@ export default function Login() {
 
   return (
     <div id="logincontainer">
+     
+     <p>To test the product without signing up use these credential</p>
+     <p> Email: test@gmail.com </p>
+     <p>password: password</p>
+      
+      
+     
       <p id="header">Guru</p>
-      <form className="login-signup-form">
+       <form className="login-signup-form">
         <p id="logintext">Login</p>
         <div>
           <i class="fa fa-envelope icon margin-right"></i>
@@ -64,7 +71,8 @@ export default function Login() {
         <button id="loginbtn" onClick={loginUser}>
           Login
         </button>
-      </form>
+       </form>
+      
     </div>
   );
 }

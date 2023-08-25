@@ -19,7 +19,7 @@ export default function LocationSearch() {
         console.log("i am data", data);
         setFetched(true);
         const user = data.data;
-        console.log("i am user", user);
+        console.log("i am user", user);   
         setlocationdata(user);
       })
       .catch((err) => {

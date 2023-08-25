@@ -18,6 +18,9 @@ export default function LoginSignup() {
 
   return (
     <div id="container">
+     {/* <centre><p>For trial login</p>
+      <p>username:test@gmail.com</p>
+      <p>password:password</p></centre>  */}
       {/* <p id="header">Guru</p> */}
       {showLogin ? <Login /> : <Signup />}
       <div className="login-signup-footer">
